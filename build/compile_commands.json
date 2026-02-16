@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/sheregill/Documents/multithreaded-web-server/build",
+  "command": "/usr/bin/g++  -I/home/sheregill/Documents/multithreaded-web-server/src -g -std=gnu++17 -o CMakeFiles/server.dir/src/main.cpp.o -c /home/sheregill/Documents/multithreaded-web-server/src/main.cpp",
+  "file": "/home/sheregill/Documents/multithreaded-web-server/src/main.cpp",
+  "output": "CMakeFiles/server.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/sheregill/Documents/multithreaded-web-server/build",
+  "command": "/usr/bin/g++  -I/home/sheregill/Documents/multithreaded-web-server/src -g -std=gnu++17 -o CMakeFiles/server.dir/src/server.cpp.o -c /home/sheregill/Documents/multithreaded-web-server/src/server.cpp",
+  "file": "/home/sheregill/Documents/multithreaded-web-server/src/server.cpp",
+  "output": "CMakeFiles/server.dir/src/server.cpp.o"
+}
+]
