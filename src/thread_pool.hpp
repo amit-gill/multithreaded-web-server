@@ -24,7 +24,10 @@ private:
 inline ThreadPool::ThreadPool(size_t threads) : stop(false) {
     for (size_t i = 0; i < threads; ++i)
         workers.emplace_back([this] {
-                               std::unique_lock<std::mutex> lock(this->queue_mutex);
+            while (true) {
+                std::function<void()> task;
+                {
+                    std::unique_lock<std::mutex> lock(this->queue_mutex);
                     this->condition.wait(lock, [this] {
                         return this->stop || !this->tasks.empty();
                     });

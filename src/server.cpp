@@ -53,8 +53,6 @@ void WebServer::start() {
 
     while (true) {
         int client_socket = accept(server_fd, nullptr, nullptr);
-        pool.enqueue(client_socket, this {
-            handle_client(client_socket, root_dir_);
-        });
+        pool.enqueue([client_socket, root_dir = root_dir_]() { handle_client(client_socket, root_dir); });
     }
 }
